@@ -7,6 +7,7 @@ const maxPrenom = tableau.tabPrenom.length;
 const maxTelephone = tableau.tabTelephone.length;
 const maxCourriel = tableau.tabCourriel.length;
 
+
 const peupler = () => {
 	console.log("ok");
 	let collection = [];
@@ -21,7 +22,7 @@ const peupler = () => {
 		let telephone = tableau.tabTelephone[positionT];
 
 		let positionC = Math.floor(Math.random()*maxCourriel);
-		let courriel = tableau.tabCourriel[positionT];
+		let courriel = tableau.tabCourriel[positionC];
 
 		collection.push({
 			courriel : prenom+nom+courriel,
@@ -30,7 +31,6 @@ const peupler = () => {
 			nom : nom
 		})
 	}
-	console.log(collection);
 	return collection;
 }
 
