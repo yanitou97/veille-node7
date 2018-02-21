@@ -88,4 +88,11 @@ app.get('/trier/:cle/:ordre', (req, res) => {
     })
 })
 
-console.log('dans main.js = ' + util.inspect(peupler()));
+app.get('/vider', (req, res) => {
+    db.collection('adresse')
+    .remove({}, (err, resultat) => {
+
+    if (err) return console.log(err)
+        res.redirect('/list')  // redirige vers la route qui affiche la collection
+    })
+})
