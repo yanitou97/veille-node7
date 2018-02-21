@@ -2,31 +2,31 @@
 
 const tableau = require("./tableau.js");
 
-console.log(tableau.tabNom);
-console.log(tableau.tabPrenom);
-console.log(tableau.tabTelephone);
-
 const maxNom = tableau.tabNom.length;
 const maxPrenom = tableau.tabPrenom.length;
 const maxTelephone = tableau.tabTelephone.length;
 
 const peupler = () => {
 	console.log("ok");
-	
-	let positionN = Math.floor(Math.random()*maxNom);
-	let nom = tableau.tabNom[positionN];
+	let collection = [];
+	for (let i=0;i<10;i++){
+		let positionN = Math.floor(Math.random()*maxNom);
+		let nom = tableau.tabNom[positionN];
 
-	let positionP = Math.floor(Math.random()*maxPrenom);
-	let prenom = tableau.tabPrenom[positionP];
+		let positionP = Math.floor(Math.random()*maxPrenom);
+		let prenom = tableau.tabPrenom[positionP];
 
-	let positionT = Math.floor(Math.random()*maxTelephone);
-	let telephone = tableau.tabTelephone[positionT];
+		let positionT = Math.floor(Math.random()*maxTelephone);
+		let telephone = tableau.tabTelephone[positionT];
 
-	return {
-		telephone : telephone,
-		prenom : prenom,
-		nom : nom
-	};
+		collection.push({
+			telephone : telephone,
+			prenom : prenom,
+			nom : nom
+		})
+	}
+	console.log(collection);
+	return collection;
 }
 
 module.exports = peupler;

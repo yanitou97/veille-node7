@@ -89,9 +89,8 @@ app.get('/trier/:cle/:ordre', (req, res) => {
 })
 
 app.get('/peupler', (req, res) => {
-	db.collection('adresse').insertMany([
+	db.collection('adresse').insertMany(
 		peupler()
-		]
 	);
  	res.redirect('/list')	
 })
