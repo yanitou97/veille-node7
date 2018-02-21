@@ -19,7 +19,11 @@ const peupler = () => {
 		let positionT = Math.floor(Math.random()*maxTelephone);
 		let telephone = tableau.tabTelephone[positionT];
 
+		let positionC = Math.floor(Math.random()*maxCourriel);
+		let courriel = tableau.tabCourriel[positionT];
+
 		collection.push({
+			courriel : prenom+nom+courriel,
 			telephone : telephone,
 			prenom : prenom,
 			nom : nom
