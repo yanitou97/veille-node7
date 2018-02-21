@@ -68,10 +68,21 @@ const tabTelephone = [
 	"514-846-3822"
 ];
 
+const tabCourriel = [
+	"@hotmail.com",
+	"@gmail.com",
+	"@videotron.ca",
+	"@bell.ca",
+	"@yahoo.com",
+	"@sympatico.fr",
+	"@outlook.com"
+];
+
 const tableau = {
 	tabNom : tabNom,
 	tabPrenom : tabPrenom,
-	tabTelephone : tabTelephone 
+	tabTelephone : tabTelephone,
+	tabCourriel : tabCourriel 
 
 }
 
