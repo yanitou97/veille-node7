@@ -88,6 +88,14 @@ app.get('/trier/:cle/:ordre', (req, res) => {
     })
 })
 
+app.get('/peupler', (req, res) => {
+	db.collection('adresse').insertMany([
+		peupler()
+		]
+	);
+ 	res.redirect('/list')	
+})
+
 app.get('/vider', (req, res) => {
     db.collection('adresse')
     .remove({}, (err, resultat) => {
