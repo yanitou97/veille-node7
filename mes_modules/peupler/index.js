@@ -5,6 +5,7 @@ const tableau = require("./tableau.js");
 const maxNom = tableau.tabNom.length;
 const maxPrenom = tableau.tabPrenom.length;
 const maxTelephone = tableau.tabTelephone.length;
+const maxCourriel = tableau.tabCourriel.length;
 
 const peupler = () => {
 	console.log("ok");
