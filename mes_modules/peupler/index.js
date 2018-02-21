@@ -2,24 +2,30 @@
 
 const tableau = require("./tableau.js");
 
-console.log(tableau.tabVille);
-console.log(tableau.tabDomaine);
+console.log(tableau.tabNom);
+console.log(tableau.tabPrenom);
+console.log(tableau.tabTelephone);
 
-const maxVille = tableau.tabVille.length;
-const maxDomaine = tableau.tabDomaine.length;
+const maxNom = tableau.tabNom.length;
+const maxPrenom = tableau.tabPrenom.length;
+const maxTelephone = tableau.tabTelephone.length;
 
 const peupler = () => {
 	console.log("ok");
 	
-	let positionV = Math.floor(Math.random()*maxVille);
-	let ville = tableau.tabVille[positionV];
+	let positionN = Math.floor(Math.random()*maxNom);
+	let nom = tableau.tabNom[positionN];
 
-	let positionD = Math.floor(Math.random()*maxDomaine);
-	let domaine = tableau.tabDomaine[positionD];
+	let positionP = Math.floor(Math.random()*maxPrenom);
+	let prenom = tableau.tabPrenom[positionP];
+
+	let positionT = Math.floor(Math.random()*maxTelephone);
+	let telephone = tableau.tabTelephone[positionT];
 
 	return {
-		domaine : domaine,
-		ville : ville
+		telephone : telephone,
+		prenom : prenom,
+		nom : nom
 	};
 }
 
