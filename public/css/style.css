@@ -40,3 +40,11 @@ nav a{
 h1, p{
     margin: 20px auto;
 }
+
+#peupler{
+    display: none;
+}
+
+#vider{
+    display: none;
+}
